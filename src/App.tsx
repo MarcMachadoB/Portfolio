@@ -1,121 +1,98 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
 import './App.css'
 
+const stats = [
+  { value: 'TSDW', label: 'Técnico Superior en DAW' },
+  { value: 'ASIR', label: 'Perfil en ciberseguridad' },
+  { value: 'IA + BD', label: 'Especialización' },
+]
+
+const skills = [
+  'React',
+  'TypeScript',
+  'Python',
+  'Java',
+  'Spring Boot',
+  'JavaScript',
+  'CSS',
+  'Responsive Design',
+]
+
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
+    <main className="about-page">
+      <section className="about-intro">
+        <div className="about-copy">
+          <p className="eyebrow">Sobre mí</p>
+          <h1>Hola, soy Marc Machado.</h1>
+          <p className="lead">
+            Soy Técnico Superior en Desarrollo de Aplicaciones Web y también cuento con
+            formación en ASIR con perfil en ciberseguridad. Además, cuento con
+            especializaciones en Ciberseguridad, Inteligencia Artificial y Big Data.
+            Me apasiona crear soluciones digitales robustas, modernas y útiles,
+            combinando desarrollo frontend con React y TypeScript y también tecnologías
+            como Python, Java, Spring Boot y JavaScript para construir aplicaciones
+            completas y bien estructuradas.
           </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
 
-      <div className="ticks"></div>
+          <div className="about-actions">
+            <a href="#contact" className="primary-btn">
+              Hablemos
+            </a>
+            <a href="#cv" className="secondary-btn">
+              Ver CV
+            </a>
+          </div>
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
+          <ul className="highlights">
+            {stats.map((item) => (
+              <li key={item.label}>
+                <strong>{item.value}</strong>
+                <span>{item.label}</span>
+              </li>
+            ))}
           </ul>
         </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
+
+        <div className="profile-card" aria-label="Perfil profesional">
+          <div className="profile-image">
+            <div className="avatar">JD</div>
+          </div>
+
+          <div className="card-details">
+            <span className="label">Perfil</span>
+            <h2>Desarrollador Web</h2>
+            <p>
+              Me centro en la creación de soluciones con buen rendimiento, código limpio
+              y experiencia de usuario cuidada, combinando diseño y lógica de negocio.
+            </p>
+          </div>
         </div>
       </section>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+      <section className="about-details">
+        <article className="detail-card">
+          <p className="card-kicker">Mi enfoque</p>
+          <h3>Soluciones digitales con funcionalidad, claridad y detalle.</h3>
+          <p>
+            Disfruto desarrollando aplicaciones que combinan buenas prácticas, una
+            interfaz intuitiva y una base técnica sólida. Mi objetivo es aportar valor
+            real a cada proyecto y crear experiencias que conecten con las personas que
+            las usan.
+          </p>
+        </article>
+
+        <article className="detail-card">
+          <p className="card-kicker">Habilidades</p>
+          <div className="skills">
+            {skills.map((skill) => (
+              <span key={skill} className="skill-tag">
+                {skill}
+              </span>
+            ))}
+          </div>
+        </article>
+      </section>
+    </main>
   )
 }
 
