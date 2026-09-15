@@ -1,0 +1,22 @@
+@use '../utils/variables' as *;
+
+.page-heading {
+  h1 {
+    margin: 0;
+    font-size: clamp(2.5rem, 4vw, 4.2rem);
+    line-height: 1.02;
+    letter-spacing: -0.06em;
+    color: $color-heading;
+  }
+
+  .page-description {
+    margin-top: 20px;
+    font-size: 1.04rem;
+    line-height: 1.8;
+    color: $color-muted;
+  }
+}
+
+.contact-heading .page-description {
+  margin-top: 0;
+}
