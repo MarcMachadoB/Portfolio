@@ -1,0 +1,39 @@
+@use '../utils/variables' as *;
+
+.project-card {
+  overflow: hidden;
+  border-radius: $radius-large;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: $shadow-card;
+  }
+}
+
+.project-preview {
+  min-height: 150px;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.04), rgba(59, 130, 246, 0.08));
+  border-bottom: 1px solid $color-border;
+}
+
+.project-content {
+  padding: 22px;
+
+  h2 {
+    margin: 0 0 10px;
+    font-size: 1.3rem;
+    color: $color-heading;
+  }
+
+  p {
+    margin: 0;
+    min-height: 58px;
+    line-height: 1.7;
+    color: $color-muted;
+  }
+}
+
+.project-technologies {
+  margin-top: 18px;
+}
