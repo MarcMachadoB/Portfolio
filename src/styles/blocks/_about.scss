@@ -1,20 +1,11 @@
 @use '../utils/variables' as *;
 
-.about-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 28px; }
-.primary-btn { background: $color-heading; color: $color-light; }
-.secondary-btn { background: transparent; color: $color-heading; border: 1px solid $color-dark-border; }
-
 .highlights {
   list-style: none;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
   padding: 0;
   margin: 34px 0 0;
 
   li {
-    display: flex;
-    flex-direction: column;
     gap: 8px;
     padding: 18px 14px;
     border-radius: $radius-medium;
@@ -34,8 +25,6 @@
 }
 
 .profile-image {
-  display: grid;
-  place-items: center;
   min-height: 260px;
   border-radius: $radius-medium;
   background: linear-gradient(135deg, rgba(15, 23, 42, 0.04), rgba(59, 130, 246, 0.08));
@@ -45,8 +34,6 @@
 .avatar {
   width: 140px;
   height: 140px;
-  display: grid;
-  place-items: center;
   border-radius: 50%;
   background: linear-gradient(135deg, #0f172a, #334155);
   color: $color-light;
@@ -82,7 +69,7 @@
   p { margin: 0; line-height: 1.8; color: $color-muted; }
 }
 
-.skills { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+.skills { margin-top: 12px; }
 .skill-tag {
   padding: 8px 12px;
   border-radius: 999px;

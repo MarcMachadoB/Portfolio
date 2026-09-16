@@ -4,8 +4,8 @@ import { skills, stats } from '../data/profile'
 function AboutPage() {
   return (
     <main className="about-page container">
-      <section className="about-intro">
-        <div className="about-copy">
+      <section className="about-intro row g-4 align-items-center">
+        <div className="about-copy col-lg-7">
           <PageHeading
             eyebrow="Sobre mí"
             title="Hola, soy Marc Machado."
@@ -22,13 +22,13 @@ function AboutPage() {
             }
           />
 
-          <div className="about-actions">
-            <a href="#/contacto" className="button primary-btn">
+          <div className="about-actions d-flex flex-wrap gap-3 mt-4">
+            <a href="#/contacto" className="btn btn-dark">
               Hablemos
             </a>
             <a
               href="/Curriculum%20Marc%20Machado.pdf"
-              className="button secondary-btn"
+              className="btn btn-outline-dark"
               target="_blank"
               rel="noreferrer"
             >
@@ -36,9 +36,9 @@ function AboutPage() {
             </a>
           </div>
 
-          <ul className="highlights">
+          <ul className="highlights row row-cols-1 row-cols-sm-3 g-3">
             {stats.map((item) => (
-              <li key={item.label} className="surface">
+              <li key={item.label} className="surface col">
                 <strong>{item.value}</strong>
                 <span>{item.label}</span>
               </li>
@@ -46,9 +46,9 @@ function AboutPage() {
           </ul>
         </div>
 
-        <div className="profile-card" aria-label="Perfil profesional">
-          <div className="profile-image">
-            <div className="avatar">JD</div>
+        <div className="profile-card col-lg-5" aria-label="Perfil profesional">
+          <div className="profile-image d-grid justify-content-center align-items-center">
+            <div className="avatar d-grid justify-content-center align-items-center">JD</div>
           </div>
 
           <div className="card-details">
@@ -62,8 +62,8 @@ function AboutPage() {
         </div>
       </section>
 
-      <section className="about-details">
-        <article className="detail-card surface">
+      <section className="about-details row g-4 mt-4">
+        <article className="detail-card surface col-lg-6">
           <p className="card-kicker">Mi enfoque</p>
           <h3>Soluciones digitales con funcionalidad, claridad y detalle.</h3>
           <p>
@@ -74,9 +74,9 @@ function AboutPage() {
           </p>
         </article>
 
-        <article className="detail-card surface">
+        <article className="detail-card surface col-lg-6">
           <p className="card-kicker">Habilidades</p>
-          <div className="skills">
+          <div className="skills d-flex flex-wrap gap-2">
             {skills.map((skill) => (
               <span key={skill} className="skill-tag">
                 {skill}
