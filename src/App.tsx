@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import AboutPage from './pages/AboutPage'
 import ContactPage from './pages/ContactPage'
+import ProjectsPage from './pages/ProjectsPage'
 import SiteHeader from './components/SiteHeader'
 import './styles/main.scss'
 
@@ -14,11 +15,21 @@ function App() {
   }, [])
 
   const isContactPage = route === '#/contacto'
+  const isProjectsPage = route === '#/proyectos'
 
   return (
     <div className="site-shell">
-      <SiteHeader isContactPage={isContactPage} />
-      {isContactPage ? <ContactPage /> : <AboutPage />}
+      <SiteHeader
+        isContactPage={isContactPage}
+        isProjectsPage={isProjectsPage}
+      />
+      {isContactPage ? (
+        <ContactPage />
+      ) : isProjectsPage ? (
+        <ProjectsPage />
+      ) : (
+        <AboutPage />
+      )}
     </div>
   )
 }
