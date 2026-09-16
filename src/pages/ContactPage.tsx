@@ -41,7 +41,7 @@ function ContactPage() {
             </Field>
 
             <Field label="Email">
-              <Input id="email" name="email" type="email" placeholder="tu@email.com" />
+              <Input id="email" name="email" type="email" placeholder="yourname@example.com" />
             </Field>
 
             <Field label="Mensaje">
