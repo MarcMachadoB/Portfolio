@@ -33,7 +33,7 @@ function ContactPage() {
           </div>
 
           <form
-            className="contact-form surface col-lg-7 d-grid gap-3 p-4 rounded-4"
+            className="surface col-lg-7 d-grid gap-3 p-4 rounded-4"
             onSubmit={(event) => event.preventDefault()}
           >
             <Field label="Nombre">
