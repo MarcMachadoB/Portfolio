@@ -4,11 +4,11 @@ type SiteHeaderProps = {
 
 function SiteHeader({ isContactPage }: SiteHeaderProps) {
   return (
-    <header className="site-header container">
+    <header className="site-header container d-flex align-items-center justify-content-between">
       <a href="#/" className="brand" aria-label="Ir a la página Sobre mí">
         MM<span>.</span>
       </a>
-      <nav className="site-nav" aria-label="Navegación principal">
+      <nav className="site-nav d-flex align-items-center gap-2" aria-label="Navegación principal">
         <a href="#/" className={!isContactPage ? 'active' : ''}>
           Sobre mí
         </a>
