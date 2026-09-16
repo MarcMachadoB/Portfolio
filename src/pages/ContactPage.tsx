@@ -13,21 +13,21 @@ function ContactPage() {
 
         <div className="contact-content">
           <div className="contact-details">
-            <a href="mailto:tu-email@ejemplo.com" className="contact-item surface">
+            <a href="mailto:mark.machado.b@gmail.com" className="contact-item surface">
               <span className="contact-label">Email</span>
-              <strong>tu-email@ejemplo.com</strong>
+              <strong>mark.machado.b@gmail.com</strong>
             </a>
-            <a href="https://www.linkedin.com/in/tu-usuario" className="contact-item surface">
+            <a href="https://www.linkedin.com/in/mark-machado-bou" className="contact-item surface">
               <span className="contact-label">LinkedIn</span>
-              <strong>linkedin.com/in/tu-usuario</strong>
+              <strong>linkedin.com/in/mark-machado</strong>
             </a>
-            <a href="https://github.com/tu-usuario" className="contact-item surface">
+            <a href="https://github.com/MarcMachadoB" className="contact-item surface">
               <span className="contact-label">GitHub</span>
-              <strong>github.com/tu-usuario</strong>
+              <strong>github.com/MarcMachadoB</strong>
             </a>
             <div className="contact-item surface">
               <span className="contact-label">Ubicación</span>
-              <strong>Tu ciudad, España</strong>
+              <strong>Tarragona, España</strong>
             </div>
           </div>
 
