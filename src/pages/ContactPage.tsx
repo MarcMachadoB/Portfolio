@@ -8,7 +8,7 @@ function ContactPage() {
         <PageHeading
           eyebrow="Contacto"
           title="¿Tienes un proyecto en mente?"
-          description="Puedes escribirme directamente o dejarme un mensaje. Sustituye estos datos de ejemplo por tu información real cuando quieras."
+          description="Puedes escribirme directamente o dejarme un mensaje. Estaré encantado de ayudarte a llevar tu idea a la realidad."
           className="contact-heading"
         />
 
