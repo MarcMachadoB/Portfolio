@@ -1,4 +1,3 @@
-import { Button, Field, Input, Textarea } from '@fluentui/react-components'
 import PageHeading from '../components/PageHeading'
 
 function ContactPage() {
@@ -13,7 +12,7 @@ function ContactPage() {
         />
 
         <div className="contact-content row g-4 mt-4">
-          <div className="contact-details col-lg-5 d-grid gap-2">
+          <div className="contact-details col-lg-8 d-grid gap-2">
             <a href="mailto:mark.machado.b@gmail.com" className="contact-item surface d-flex flex-column gap-1 p-3 rounded-3">
               <span className="contact-label">Email</span>
               <strong>mark.machado.b@gmail.com</strong>
@@ -31,32 +30,6 @@ function ContactPage() {
               <strong>Tarragona, España</strong>
             </div>
           </div>
-
-          <form
-            className="surface col-lg-7 d-grid gap-3 p-4 rounded-4"
-            onSubmit={(event) => event.preventDefault()}
-          >
-            <Field label="Nombre">
-              <Input id="name" name="name" placeholder="Tu nombre" />
-            </Field>
-
-            <Field label="Email">
-              <Input id="email" name="email" type="email" placeholder="yourname@example.com" />
-            </Field>
-
-            <Field label="Mensaje">
-              <Textarea
-                id="message"
-                name="message"
-                rows={5}
-                placeholder="Cuéntame brevemente en qué puedo ayudarte..."
-              />
-            </Field>
-
-            <Button type="submit" appearance="primary">
-              Enviar mensaje
-            </Button>
-          </form>
         </div>
       </section>
     </main>
