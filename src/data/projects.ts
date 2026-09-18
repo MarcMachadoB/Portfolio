@@ -9,11 +9,12 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    id: 'proyecto-1',
-    title: 'Proyecto en preparación',
-    description: 'Aquí aparecerá la descripción de uno de mis próximos proyectos.',
-    technologies: ['React', 'TypeScript'],
-    status: 'Próximamente',
+    id: 'jarl-9000',
+    title: 'JARL-9000',
+    description: 'Chatbot en Python para clasificar preguntas frecuentes y devolver respuestas según su categoría e idioma.',
+    technologies: ['Python', 'scikit-learn', 'NLTK', 'pandas'],
+    status: 'Disponible',
+    link: 'https://github.com/MarcMachadoB/JARL-9000',
   },
   {
     id: 'proyecto-2',
