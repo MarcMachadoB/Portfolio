@@ -4,12 +4,4 @@ import { defineConfig } from 'vite'
 export default defineConfig({
   plugins: [react()],
   base: '/Portfolio/',
-  server: {
-    proxy: {
-      '/api': {
-        target: 'http://localhost:8081',
-        changeOrigin: true,
-      },
-    },
-  },
 })
