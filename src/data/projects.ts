@@ -5,6 +5,7 @@ export type Project = {
   technologies: string[]
   status: string
   link?: string
+  image?: string
 }
 
 export const projects: Project[] = [
@@ -15,6 +16,7 @@ export const projects: Project[] = [
     technologies: ['Python', 'scikit-learn', 'NLTK', 'pandas'],
     status: 'Disponible',
     link: 'https://github.com/MarcMachadoB/JARL-9000',
+    image: 'Jarl9000captura.png',
   },
   {
     id: 'proyecto-2',

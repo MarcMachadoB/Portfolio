@@ -14,7 +14,14 @@ function ProjectsPage() {
         {projects.map((project) => (
           <article key={project.id} className="project-card surface col">
             <div className="project-preview d-flex align-items-center justify-content-center">
-              <span className="label">{project.status}</span>
+              {project.image ? (
+                <img
+                  src={`${import.meta.env.BASE_URL}${project.image}`}
+                  alt={`Captura de ${project.title}`}
+                />
+              ) : (
+                <span className="label">{project.status}</span>
+              )}
             </div>
             <div className="project-content">
               <h2>{project.title}</h2>
