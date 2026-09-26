@@ -1,6 +1,8 @@
 @use '../utils/variables' as *;
 
 .page-heading {
+  max-width: 980px;
+
   h1 {
     margin: 0;
     font-size: clamp(2.5rem, 4vw, 4.2rem);

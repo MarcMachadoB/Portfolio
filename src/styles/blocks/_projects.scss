@@ -1,6 +1,9 @@
 @use '../utils/variables' as *;
 
 .project-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   overflow: hidden;
   border-radius: $radius-large;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -25,6 +28,9 @@
 }
 
 .project-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
   padding: 22px;
 
   h2 {
@@ -42,5 +48,6 @@
 }
 
 .project-technologies {
-  margin-top: 18px;
+  margin-top: auto;
+  padding-top: 18px;
 }

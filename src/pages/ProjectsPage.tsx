@@ -3,7 +3,7 @@ import { projects } from '../data/projects'
 
 function ProjectsPage() {
   return (
-    <main className="about-page container">
+    <main className="about-page projects-page container">
       <PageHeading
         eyebrow="Proyectos"
         title="Trabajo y proyectos en construcción."
