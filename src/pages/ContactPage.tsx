@@ -13,11 +13,11 @@ function ContactPage() {
 
         <div className="contact-content row g-4 mt-4">
           <div className="contact-details col-lg-8 d-grid gap-2">
-            <a href="mailto:mark.machado.b@gmail.com" className="contact-item surface d-flex flex-column gap-1 p-3 rounded-3">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mark.machado.b%40gmail.com" className="contact-item surface d-flex flex-column gap-1 p-3 rounded-3">
               <span className="contact-label">Email</span>
               <strong>mark.machado.b@gmail.com</strong>
             </a>
-            <a href="https://www.linkedin.com/in/mark-machado-bou" className="contact-item surface d-flex flex-column gap-1 p-3 rounded-3">
+            <a href="https://www.linkedin.com/in/mark-machado-bou-59840b26a/" className="contact-item surface d-flex flex-column gap-1 p-3 rounded-3">
               <span className="contact-label">LinkedIn</span>
               <strong>linkedin.com/in/mark-machado</strong>
             </a>
