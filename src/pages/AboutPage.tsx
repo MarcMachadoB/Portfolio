@@ -27,10 +27,8 @@ function AboutPage() {
               Hablemos
             </a>
             <a
-              href="/Curriculum%20Marc%20Machado.pdf"
+              href="#/cv"
               className="btn btn-outline-dark"
-              target="_blank"
-              rel="noreferrer"
             >
               Ver CV
             </a>
@@ -47,8 +45,12 @@ function AboutPage() {
         </div>
 
         <div className="profile-card col-lg-5" aria-label="Perfil profesional">
-          <div className="profile-image d-grid justify-content-center align-items-center">
-            <div className="avatar d-grid justify-content-center align-items-center">JD</div>
+          <div className="profile-image">
+            <img
+              className="profile-photo"
+              src={`${import.meta.env.BASE_URL}foto_perfil.jpeg`}
+              alt="Marc Machado"
+            />
           </div>
 
           <div className="card-details">

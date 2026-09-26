@@ -1,0 +1,217 @@
+@use '../utils/variables' as *;
+
+.cv-page {
+  padding-top: 64px;
+  padding-bottom: 80px;
+}
+
+.cv-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: 32px;
+  padding: 32px 0 48px;
+  border-bottom: 1px solid $color-border;
+
+  .page-heading { max-width: 760px; }
+}
+
+.cv-identity {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 250px;
+  padding: 16px 18px;
+  border: 1px solid $color-border;
+  border-radius: 14px;
+  background: $color-light;
+
+  > div { display: grid; gap: 3px; }
+  strong { color: $color-heading; font-size: 0.95rem; }
+  > div > span { color: $color-subtle; font-size: 0.76rem; }
+}
+
+.cv-monogram {
+  display: grid;
+  width: 46px;
+  aspect-ratio: 1;
+  place-items: center;
+  border-radius: 12px;
+  background: $color-heading;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.cv-timelines {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  gap: clamp(32px, 6vw, 84px);
+  padding: 48px 0 54px;
+}
+
+.cv-section-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 26px;
+
+  h2 { margin: 0; color: $color-heading; font-size: 1.55rem; }
+}
+
+.cv-index {
+  padding-top: 2px;
+  color: #bf4a32;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.cv-kicker {
+  margin: 0 0 4px;
+  color: $color-subtle;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.cv-timeline {
+  position: relative;
+  display: grid;
+  gap: 0;
+  margin: 0 0 0 7px;
+  padding: 0 0 0 28px;
+  list-style: none;
+
+  &::before {
+    position: absolute;
+    top: 7px;
+    bottom: 20px;
+    left: 0;
+    width: 1px;
+    background: rgba(100, 116, 139, 0.28);
+    content: '';
+  }
+}
+
+.cv-timeline-item {
+  position: relative;
+  padding: 0 0 24px;
+  animation: cv-rise 550ms both;
+
+  @for $index from 1 through 6 {
+    &:nth-child(#{$index}) { animation-delay: #{($index - 1) * 85}ms; }
+  }
+}
+
+.cv-timeline-node {
+  position: absolute;
+  top: 4px;
+  left: -33px;
+  width: 11px;
+  height: 11px;
+  border: 2px solid #bf4a32;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 0 4px #fff;
+}
+
+.cv-timeline-node-muted { border-color: $color-subtle; }
+
+.cv-entry {
+  padding: 0 0 18px;
+  border-bottom: 1px solid $color-border;
+
+  h3 { margin: 7px 0 4px; color: $color-heading; font-size: 1.02rem; line-height: 1.45; }
+  p { margin: 0; color: $color-muted; font-size: 0.88rem; line-height: 1.65; }
+}
+
+.cv-entry-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.cv-entry-type,
+.cv-entry-period {
+  color: $color-subtle;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.cv-entry-period {
+  flex: 0 0 auto;
+  color: #bf4a32;
+  text-align: right;
+}
+
+.cv-additional {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  gap: clamp(32px, 6vw, 84px);
+  padding: 36px 0 48px;
+  border-top: 1px solid $color-border;
+}
+
+.cv-certification-list,
+.cv-language-list {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cv-certification-list li,
+.cv-language-list li {
+  padding: 12px 14px;
+  border: 1px solid $color-border;
+  border-radius: 10px;
+  color: $color-muted;
+  font-size: 0.84rem;
+}
+
+.cv-language-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+
+  strong { color: $color-heading; }
+  span { color: $color-subtle; }
+}
+
+.cv-footer-note {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 24px;
+  border-top: 1px solid $color-border;
+
+  p { flex: 1; margin: 0; color: $color-heading; font-weight: 600; }
+}
+
+@keyframes cv-rise {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cv-timeline-item { animation: none; }
+}
+
+@media (max-width: 767px) {
+  .cv-page { padding-top: 42px; }
+  .cv-hero { grid-template-columns: 1fr; gap: 24px; padding-top: 12px; }
+  .cv-identity { min-width: 0; }
+  .cv-timelines { grid-template-columns: 1fr; gap: 38px; padding-top: 36px; }
+  .cv-additional { grid-template-columns: 1fr; gap: 38px; }
+}
+
+@media (max-width: 480px) {
+  .cv-entry-meta { align-items: flex-start; flex-direction: column; gap: 4px; }
+  .cv-entry-period { text-align: left; }
+  .cv-footer-note { align-items: stretch; flex-wrap: wrap; }
+  .cv-footer-note p { flex-basis: 100%; }
+  .cv-footer-note .btn { flex: 1; }
+}
