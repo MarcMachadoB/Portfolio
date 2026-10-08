@@ -33,10 +33,14 @@ function ProjectsPage() {
                   </span>
                 ))}
               </div>
-              {project.link && (
-                <a href={project.link} className="btn btn-outline-dark mt-4">
-                  Ver proyecto
-                </a>
+              {project.links && (
+                <div className="d-flex flex-wrap gap-2 mt-4">
+                  {project.links.map((link) => (
+                    <a key={link.url} href={link.url} className="btn btn-outline-dark">
+                      {link.label}
+                    </a>
+                  ))}
+                </div>
               )}
             </div>
           </article>
