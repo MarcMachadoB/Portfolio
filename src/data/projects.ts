@@ -32,4 +32,12 @@ export const projects: Project[] = [
     ],
     image: 'spring_boot-logo.png',
   },
+  {
+    id: 'trato',
+    title: 'Trato',
+    description: 'Plataforma comunitaria para conocer experiencias en procesos de selección. Incluye un frontend con React y TypeScript y un backend inicial con Spring Boot para autenticación.',
+    technologies: ['React', 'TypeScript', 'Java', 'Spring Boot', 'Firebase'],
+    status: 'En desarrollo',
+    image: 'trato_logo.png',
+  },
 ]
